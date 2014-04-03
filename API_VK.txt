@@ -1,0 +1,26 @@
+VK dump: {u'first_name': u'John', u'last_name': u'Zorn', u'user_id': 92250581, u'uid': 92250581, u'access_token': u'88d2ff49639a9b04cc8b63184a4588036f3ba8d4b9ef08b69e2a111aa25f4c22d255b4e0770e615cb47bb', u'photo': u'http://cs5110.vk.me/u92250581/e_619c9776.jpg', u'expires_in': 86399, 'user_photo': u'http://cs5110.vk.me/u92250581/e_619c9776.jpg', u'nickname': u'', u'screen_name': u'jzorn'}
+
+https://api.vk.com/method/users.get?uids=92250581,5400182&fields=uid,first_name,last_name,screen_name,sex,bdate,photo_big&access_token=88d2ff49639a9b04cc8b63184a4588036f3ba8d4b9ef08b69e2a111aa25f4c22d255b4e0770e615cb47bb
+
+{
+    "response": [{
+        "uid": 92250581,
+        "first_name": "John",
+        "last_name": "Zorn",
+        "sex": 2,
+        "screen_name": "jzorn",
+        "bdate": "2.9.1953",
+        "photo_big": "http:\/\/cs5110.vk.me\/u92250581\/a_65078391.jpg"
+    }, {
+        "uid": 5400182,
+        "first_name": "Ольга",
+        "last_name": "Бондаренко",
+        "sex": 1,
+        "screen_name": "olha_bondarenko",
+        "bdate": "21.12.1987",
+        "photo_big": "http:\/\/cs9784.vk.me\/u5400182\/a_f0492b00.jpg"
+    }]
+}
+
+
+https://api.vk.com/method/users.get?uids=8545863&fields=sex,bdate&access_token=1f491d61fd7c6e6611de36036c0d1d58d37a55f3b881c74905008458c6024d51fe29be63b9b7373053257

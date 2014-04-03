@@ -1,0 +1,7 @@
+django>=1.5
+djangorestframework
+markdown
+django-filter
+django-oauth-plus
+django-oauth2-provider
+python-social-auth
