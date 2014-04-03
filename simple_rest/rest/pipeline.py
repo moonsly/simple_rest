@@ -23,7 +23,7 @@ def get_gender_age(strategy, details, response, user=None, *args, **kwargs):
     
     if user:
         # Just created the user?        
-        if 1: #kwargs['is_new']:
+        if kwargs['is_new']:
             if strategy.backend.__class__.__name__ == 'FacebookOAuth2':                
                 if 'gender' in response:
                     details['gender'] = response['gender'] 
