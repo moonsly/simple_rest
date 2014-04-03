@@ -3,7 +3,7 @@
 
 {% block content %}
 <p>You are logged in as {{ user.username }}! (<a href="/logout/">Logout</a>)</p>
-
+<p>Go to <a href="/api/user">REST API</a> home </p>
 <p>Associated:</p>
 {% for assoc in backends.associated %}
   <div>
@@ -14,14 +14,6 @@
   </div>
 {% endfor %}
 
-<p>Associate:</p>
-<ul>
-  {% for name in backends.not_associated %}
-    <li>
-      <a href="{% url 'social:begin' name %}">{{ name }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
 {% if plus_id %}
 <div id="signinButton">

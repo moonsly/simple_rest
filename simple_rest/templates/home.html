@@ -8,58 +8,6 @@ Please auth through Facebook or VK:<br/><br/>
 <a href="{% url 'social:begin' 'vk-oauth2' %}">VK.com OAuth2</a>
 <br/>
 
-<!-- <a href="{% url 'social:begin' 'weibo' %}">Weibo OAuth2</a> <br />
-<a href="{% url 'social:begin' 'xing' %}">Xing OAuth1</a> <br />
-<a href="{% url 'social:begin' 'yahoo' %}">Yahoo OpenId</a> <br />
-<a href="{% url 'social:begin' 'yahoo-oauth' %}">Yahoo OAuth1</a> <br />
-<a href="{% url 'social:begin' 'yammer' %}">Yammer OAuth2</a> <br />
-<a href="{% url 'social:begin' 'yandex-oauth2' %}">Yandex OAuth2</a>
-<a href="{% url 'social:begin' 'taobao' %}">TAOBAO OAuth2</a> <br />
-<a href="{% url 'social:begin' 'vimeo' %}">Vimeo OAuth1</a> <br />
-
-<a href="{% url 'social:begin' 'email' %}">Email Auth</a> <br />
-<a href="{% url 'social:begin' 'username' %}">Username Auth</a> <br /> 
-
-<form action="{% url 'social:begin' 'openid' %}" method="post">{% csrf_token %}
-  <div>
-    <label for="openid_identifier">OpenId provider</label>
-    <input id="openid_identifier" type="text" value="" name="openid_identifier" />
-    <input type="submit" value="Login" />
-  </div>
-</form>
-
-<form action="{% url 'social:begin' 'livejournal' %}" method="post">{% csrf_token %}
-  <div>
-    <label for="openid_lj_identifier">LiveJournal ID</label>
-    <input id="openid_lj_identifier" type="text" value="" name="openid_lj_user" />
-    <input type="submit" value="Login" />
-  </div>
-</form>
-
-<form method="post" action="{% url 'social:complete' 'persona' %}">{% csrf_token %}
-  <input type="hidden" name="assertion" value="" />
-  <a rel="nofollow" id="persona" href="#">Persona</a>
-</form>
-
-{% if plus_id %}
-<form id="google-plus" method="post" action="{% url 'social:complete' 'google-plus' %}">{% csrf_token %}
-  <input id="at" type="hidden" name="access_token" value="" />
-  <input id="code" type="hidden" name="code" value="" />
-
-  <div id="signinButton">
-    <span class="g-signin" data-scope="{{ plus_scope }}"
-                           data-clientid="{{ plus_id }}"
-                           data-redirecturi="postmessage"
-                           data-accesstype="offline"
-                           data-cookiepolicy="single_host_origin"
-                           data-callback="signInCallback">
-    </span>
-  </div>
-</form>
-{% endif %}
-
-//  -->
-
 {% endblock %}
 
 {% block head_scripts %}

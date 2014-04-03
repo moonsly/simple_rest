@@ -7,6 +7,7 @@ from rest_framework import serializers
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.decorators import login_required
+from django.views.generic.base import RedirectView
 
 from rest.serializers import UserListSerializer, UserSerializer
 from rest.models import CustomUser
@@ -34,5 +35,6 @@ router.register(r'users', UserViewSet)
 
 urlpatterns += patterns('',
     url(r'^api/', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/login/?$', RedirectView.as_view(url='/', permanent=False), name='index'),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 )
